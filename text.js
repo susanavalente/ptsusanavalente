@@ -48,27 +48,44 @@ function exercise (am,c1,c2) {
  var height = document.getElementById('height');
  var bmi = weight.value/(height.value*height.value);
  var bmi1 = document.getElementById('bmiValue')
-
+ var img = document.createElement("img");
+ var src = document.getElementById("pic");
  bmi1.textContent = bmi;
+ src.appendChild(img);
 
  if (weight.value<=height.value){
  alert ('you have to put the data correctly!');
- bmi1.style.color = 'blue'
+ bmi1.style.color = 'blue';
+ img.src = "img/cross.png";
  }
- if (bmi<=19.9){
+ else if (bmi<=19.9){
  alert ('underweight! EAT MORE!');
- bmi1.style.color = 'yellow'
+ bmi1.style.color = 'yellow';
+ img.src = "img/skinny.png";
  }
  else if (bmi>20 && bmi<=23.4){
  alert ('HEALTHY!');
-  bmi1.style.color = 'green'
+ bmi1.style.color = 'green';
+ img.src = "img/healthy.png";
  }
  else if (bmi>=23.5 && bmi<26){
  alert ('Overweight');
-  bmi1.style.color = 'orange'
+  bmi1.style.color = 'orange';
+  img.src = "img/overweight.png";
  }
  else {
  alert ('OBESE! WARNING, WARNING!');
-  bmi1.style.color = 'red'
+  bmi1.style.color = 'red';
+  img.src = "img/obese.png";
  }
  }
+
+
+function conversion (eur) {
+var eur = document.getElementById('eur');
+var convValue = (eur.value*0.8);
+var convfinal = document.getElementById('convValue');
+
+convfinal.textContent = convValue;
+convfinal.style.color = 'blue';
+}
