@@ -85,7 +85,15 @@ function conversion (eur) {
 var eur = document.getElementById('eur');
 var convValue = (eur.value*0.8);
 var convfinal = document.getElementById('convValue');
+var convValue1 = (eur.value*1.08);
+var convfinal1 = document.getElementById('convValue1');
+var convValue2 = (eur.value*78);
+var convfinal2 = document.getElementById('convValue2');
 
 convfinal.textContent = convValue;
+convfinal1.textContent = convValue1;
+convfinal2.textContent = convValue2;
 convfinal.style.color = 'blue';
+convfinal1.style.color = 'red';
+convfinal2.style.color = 'green';
 }
